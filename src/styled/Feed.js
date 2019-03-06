@@ -64,6 +64,7 @@ Feed.Button = styled.button`
   height: 34px;
   right: 1px;
   top: 1px;
+  background-color: transparent;
   border: none;
   border-radius: 0 3px 3px 0;
   color: #50abf0;

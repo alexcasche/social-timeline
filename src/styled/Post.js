@@ -37,6 +37,7 @@ Post.Delete = styled.button`
   padding: 0;
   right: -2px;
   top: -5px;
+  background-color: transparent;
   border: none;
   color: #bbb;
   transition: color .15s ease-in-out;
