@@ -1,20 +1,28 @@
-
-    
 import React from 'react'
 import { PropTypes as t } from 'prop-types'
 import UserComponent from './UserComponent'
-import PostsComponent from './PostsComponent'
+import FeedComponent from './FeedComponent'
+import PostComponent from './PostComponent'
 import { Page } from '../styled'
 
 const AppComponent = props => {
+  const { activeUser, activePosts, users, createPost, deletePost } = props
   return (
     <Page>
-      <UserComponent activeUser={props.activeUser} />
-      <PostsComponent 
-        activePosts={props.activePosts}
-        createPost={props.createPost}
-        deletePost={props.deletePost}
-      />
+      <UserComponent activeUser={activeUser} />
+      <FeedComponent 
+        activeUser={activeUser}
+        createPost={createPost}
+      >
+        {activePosts.map((post, index) =>
+          <PostComponent
+            post={post}
+            author={users[post.author]}
+            deletePost={deletePost}
+            key={index}
+          />
+        )}
+      </FeedComponent>
     </Page>
   )
 }
@@ -22,6 +30,7 @@ const AppComponent = props => {
 AppComponent.propTypes = {
   activeUser: t.object.isRequired,
   activePosts: t.array.isRequired,
+  users: t.object.isRequired,
   createPost: t.func.isRequired,
   deletePost: t.func.isRequired,
 }

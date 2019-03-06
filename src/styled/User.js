@@ -8,9 +8,10 @@ const User = styled.div`
   justify-content: flex-start;
   align-items: center;
   background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 2px;
+  border: 1px solid #eee;
+  border-radius: 5px;
   margin-bottom: 30px;
+  overflow: hidden;
   @media only screen and (min-width: 768px) {
     width: 300px
     margin-bottom: 0;
@@ -21,6 +22,7 @@ User.Avatar = styled.img`
   width: 50px;
   height: 50px;
   margin-right: 10px;
+  border-radius: 3px;
 `
 
 User.Info = styled.div`

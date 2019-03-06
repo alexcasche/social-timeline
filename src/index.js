@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import { GlobalStyle } from './constants/globalStyle'
+import { GlobalStyle } from './constants/globalStyle';
+import './constants/iconLibrary';
 import AppContainer from './containers/AppContainer';
 
 ReactDOM.render(

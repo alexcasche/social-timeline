@@ -27,11 +27,12 @@ class AppContainer extends Component {
     if(objectEmpty(users)) actions.setUsers(defaultData.users)
   }
   render() {
-    const { activePosts, activeUser, actions } = this.props
+    const { activePosts, activeUser, users, actions } = this.props
     return (
       <AppComponent 
         activePosts={activePosts}
         activeUser={activeUser}
+        users={users}
         createPost={actions.createPost}
         deletePost={actions.deletePost}
       />
@@ -39,7 +40,7 @@ class AppContainer extends Component {
   }
 }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state) {
   return {
     posts: getPosts(state),
     settings: getSettings(state),

@@ -11,7 +11,7 @@ const UserComponent = props => {
       <User.Avatar src={ avatar }/>
       <User.Info>
         <User.Name>{ firstName } { lastName }</User.Name>
-        <User.Handle>{ username }</User.Handle>
+        <User.Handle>@{ username }</User.Handle>
       </User.Info>
     </User>
   )
