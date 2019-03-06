@@ -1,3 +1,3 @@
 export const arrayMax = array => {
-  return Math.max(...array)
+  return array.length > 0 ? Math.max(...array) : 0
 }
