@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/alexcasche/social-timeline/precache-manifest.39738f844914a0e97ce6d228b1ea5a89.js"
+  "/social-timeline/precache-manifest.da16808a7b9201ab18740e1e2b0c1242.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/alexcasche/social-timeline/index.html", {
+workbox.routing.registerNavigationRoute("/social-timeline/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
