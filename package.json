@@ -2,6 +2,7 @@
   "name": "social-timeline",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://alexcasche.github.io/social-timeline",
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.1.4",
     "gh-pages": "^2.0.1",
@@ -15,14 +16,15 @@
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0",
     "styled-components": "^4.1.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
